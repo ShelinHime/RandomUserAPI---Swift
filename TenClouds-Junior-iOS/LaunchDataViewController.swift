@@ -46,6 +46,12 @@ class LaunchDataViewController: UIViewController {
         changeForIndicator(true)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SplashScreenSegues.segueToUserList{
+            let destinationController = segue.destinationViewController as! UserListTableViewController
+            destinationController.initializeViewModel()
+        }
+    }
     
     private func changeForIndicator(isBusy: Bool){
         if (isBusy){

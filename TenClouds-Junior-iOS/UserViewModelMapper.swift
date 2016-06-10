@@ -12,14 +12,15 @@ import RealmSwift
 
 class UserViewModelMapper {
     static func create(userData: JSON, onCompletion: () -> Void){
-
+        
         let realm = try! Realm()
         var idIncr = 0;
         //getting users
         let channelsArray = userData["results"].array
         
         for entry in channelsArray! {
-            let id: String = String(idIncr)
+            realm.beginWrite()
+            let id: Int = idIncr
             let name: String = entry["name"]["first"].string!
             let surname: String = entry["name"]["last"].string!
             let imageURL: String = entry["picture"]["medium"].string!
@@ -28,10 +29,11 @@ class UserViewModelMapper {
             let cellPhone: String = entry["cell"].string!
             let date = NSDate()
             
-            try! realm.write{
+            
                 realm.create(User.self, value: [id, name, surname, imageURL, gender, email, cellPhone, date])
-            }
+            
             idIncr += 1
+            try! realm.commitWrite()
         }
 
         dispatch_async(dispatch_get_main_queue(), {

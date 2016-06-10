@@ -11,7 +11,7 @@ import RealmSwift
 
 
 class UserHistory: Object{
-    dynamic var id: String = "0"
+    dynamic var id = 0
     let edits = List<User>()
     
     override static func primaryKey() -> String? {

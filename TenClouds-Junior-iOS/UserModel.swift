@@ -16,7 +16,7 @@ enum Gender : String {
 }
 
 class User: Object{
-    dynamic var id: String = "0"
+    dynamic var id = 0
     dynamic var name: String = ""
     dynamic var surname: String = ""
     dynamic var imageURL: String = ""

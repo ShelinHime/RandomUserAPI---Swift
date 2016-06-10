@@ -21,7 +21,6 @@ class UserProvider: NSObject {
     func requestUsers(path: String, onCompletion: (JSON, NSError?) -> Void){
         let request = NSMutableURLRequest(URL: NSURL(string: path)!)
         let session = NSURLSession.sharedSession()
-        debugPrint("sesja")
         let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error -> Void in
             if let jsonData = data {
                 let json: JSON = JSON(data: jsonData)
