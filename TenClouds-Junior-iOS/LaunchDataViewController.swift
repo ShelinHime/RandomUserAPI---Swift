@@ -7,29 +7,67 @@
 //
 
 import UIKit
+import RealmSwift
+import ReachabilitySwift
 
 class LaunchDataViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    var userProvider = UserProvider()
+    var activityIndicatorView = UIView()
+    var reachability: Reachability?
+    
+    override func viewWillAppear(animated: Bool){
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
+        configReachability()
+        //Check for reachability
+        if reachability!.isReachable(){
+            //Rewrite data
+            let realm = try! Realm()
+            try! realm.write {debugPrint("DELETED - Realm")
+                realm.deleteAll() }
+            
+            userProvider.getRandomUsers({ (users) in
+                UserViewModelMapper.create(users, onCompletion: {
+                    self.changeForIndicator(false)
+                    self.performSegueWithIdentifier(SplashScreenSegues.segueToUserList, sender: self)
+                })
+            })
+        }
+            //Show saved data
+        else{
+            self.performSegueWithIdentifier(SplashScreenSegues.segueToUserList, sender: self)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        changeForIndicator(true)
     }
-    */
+    
+    
+    private func changeForIndicator(isBusy: Bool){
+        if (isBusy){
+            self.activityIndicatorView.addDownloadUsersView(self.view.frame)
+            self.view.addSubview(self.activityIndicatorView)
+        }
+        else {
+            self.activityIndicatorView.removeFromSuperview()
+        }
+    }
+    
+    private func configReachability(){
+        do {
+            reachability = try Reachability.reachabilityForInternetConnection()
+        } catch {
+            debugPrint("Unable to create Reachability")
+            return
+        }
+    }
+    
+}
 
+struct SplashScreenSegues{
+    static let segueToUserList = "segueToUserList"
 }
