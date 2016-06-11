@@ -93,7 +93,7 @@
                                     <outlet property="firstNameLabel" destination="Dgg-6J-kre" id="guq-2G-B7b"/>
                                     <outlet property="lastNameLabel" destination="tm7-xW-d5T" id="f3f-cb-tXX"/>
                                     <outlet property="userImage" destination="PSu-7V-0vS" id="9cH-Pc-676"/>
-                                    <segue destination="AtQ-I7-Pk5" kind="show" id="ngg-53-7Ib"/>
+                                    <segue destination="AtQ-I7-Pk5" kind="show" identifier="segueToUserDetails" id="ngg-53-7Ib"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

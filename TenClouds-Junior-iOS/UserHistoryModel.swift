@@ -12,7 +12,14 @@ import RealmSwift
 
 class UserHistory: Object{
     dynamic var id = 0
-    let edits = List<User>()
+    dynamic var userid = 0
+    dynamic var name: String = ""
+    dynamic var surname: String = ""
+    dynamic var gender: String = ""
+    dynamic var email: String = ""
+    dynamic var cellPhone: String = ""
+    dynamic var date: NSDate = NSDate()
+    
     
     override static func primaryKey() -> String? {
         return "id"

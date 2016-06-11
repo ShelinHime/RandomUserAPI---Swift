@@ -44,24 +44,18 @@ class UserListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserTableViewCell
-        
-       /* let object = results[indexPath.row]
-        cell.firstNameLabel.text = object.name
-        cell.lastNameLabel.text = object.surname
-        cell.userImage.layer.backgroundColor = UIColor.blackColor().CGColor
-        if let url = NSURL(string: object.imageURL) {
-            if let data = NSData(contentsOfURL: url) {
-                cell.userImage.image = UIImage(data: data)
-                cell.userImage.clipsToBounds = true
-                cell.userImage.layer.cornerRadius = 30
-                cell.userImage.layer.borderWidth = 2
-                cell.userImage.layer.borderColor = UIColor.whiteColor().CGColor
-            }
-        }  */
 
-        let object = viewModel.results[indexPath.row]
         cell.supplement(indexPath, results: viewModel.results)
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == MainStoryboardSegues.segueToUserDetails{
+            let destinationController = segue.destinationViewController as! UserDetailsViewController
+            let user = viewModel.results[(tableView.indexPathForSelectedRow?.row)!]
+            destinationController.user = user
+            destinationController.initializeViewModel(user.id)
+        }
     }
     
     private func setupResultsNotification(){

@@ -31,13 +31,13 @@ class LaunchDataViewController: UIViewController {
             userProvider.getRandomUsers({ (users) in
                 UserViewModelMapper.create(users, onCompletion: {
                     self.changeForIndicator(false)
-                    self.performSegueWithIdentifier(SplashScreenSegues.segueToUserList, sender: self)
+                    self.performSegueWithIdentifier(MainStoryboardSegues.segueToUserList, sender: self)
                 })
             })
         }
             //Show saved data
         else{
-            self.performSegueWithIdentifier(SplashScreenSegues.segueToUserList, sender: self)
+            self.performSegueWithIdentifier(MainStoryboardSegues.segueToUserList, sender: self)
         }
     }
     
@@ -47,7 +47,7 @@ class LaunchDataViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == SplashScreenSegues.segueToUserList{
+        if segue.identifier == MainStoryboardSegues.segueToUserList{
             let destinationController = segue.destinationViewController as! UserListTableViewController
             destinationController.initializeViewModel()
         }
@@ -74,6 +74,8 @@ class LaunchDataViewController: UIViewController {
     
 }
 
-struct SplashScreenSegues{
+struct MainStoryboardSegues{
     static let segueToUserList = "segueToUserList"
+    static let segueToUserDetails = "segueToUserDetails"
+    static let segueToHistory = "segueToHistory"
 }

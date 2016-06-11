@@ -9,10 +9,20 @@
 import RealmSwift
 import Foundation
 
-enum Gender : String {
-    case Male = "male"
-    case Female = "female"
-    case Uknown = "uknown"
+enum Gender :Int, CustomStringConvertible {
+    case Male = 0
+    case Female = 1
+    case Uknown = 2
+    static var count: Int { return Gender.Uknown.hashValue + 1 }
+    
+    var description: String {
+        switch self {
+        case .Male: return "male"
+        case .Female   : return "female"
+        case .Uknown  : return "uknown"
+        }
+    }
+    
 }
 
 class User: Object{
