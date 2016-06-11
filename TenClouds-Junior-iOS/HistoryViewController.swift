@@ -15,13 +15,25 @@ class HistoryViewController: UITableViewController {
     let realm = try! Realm()
     var results: Results<(UserHistory)>!
     var userEdits: [HistoryViewModel] = [HistoryViewModel]()
+    var noHistoryView = UIView()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         results = realm.objects(UserHistory).filter("userid = %@", userid)
+        if results.count > 0 {
         for result in results{
             userEdits.append(HistoryViewModel.init(name: result.name, surname: result.surname, gender: result.gender, email: result.email, cellPhone: result.cellPhone))
         }
+        }
+        else{
+            self.noHistoryView.addNoHistoryView(self.view.frame)
+            self.view.addSubview(self.noHistoryView)
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.noHistoryView.removeFromSuperview()
     }
     
     override func viewDidLoad() {

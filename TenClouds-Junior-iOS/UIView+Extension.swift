@@ -30,4 +30,19 @@ extension UIView {
         
     }
     
+    func addNoHistoryView(controllerViewFrame: CGRect) {
+
+        self.frame = CGRect(x: 0, y: 0, width: controllerViewFrame.width, height: controllerViewFrame.height-50)
+        self.backgroundColor = UIColor.grayColor()
+        self.alpha = 0.9
+        self.layer.cornerRadius = 10
+        
+        let textLabel = UILabel(frame: CGRect(x: controllerViewFrame.midX - 30, y: controllerViewFrame.midY - 30, width: 200, height: 50))
+        textLabel.textColor = UIColor.whiteColor()
+        textLabel.text = "No History"
+
+        self.addSubview(textLabel)
+        
+    }
+    
 }
