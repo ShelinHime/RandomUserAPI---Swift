@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		347527681D0A10660028FAEF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347527671D0A10660028FAEF /* Realm.framework */; };
+		3475276A1D0A10690028FAEF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347527691D0A10690028FAEF /* RealmSwift.framework */; };
+		349F15BB1D0AC558007CA091 /* LaunchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15BA1D0AC558007CA091 /* LaunchDataViewController.swift */; };
+		349F15BD1D0AC5BE007CA091 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15BC1D0AC5BE007CA091 /* UsersViewModel.swift */; };
+		349F15C21D0AED44007CA091 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15C11D0AED44007CA091 /* UIView+Extension.swift */; };
+		349F15C41D0AF77F007CA091 /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349F15C31D0AF77F007CA091 /* ReachabilitySwift.framework */; };
+		349F15C61D0B0225007CA091 /* UserHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15C51D0B0225007CA091 /* UserHistoryViewModel.swift */; };
+		349F15CA1D0B1426007CA091 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15C91D0B1426007CA091 /* UserTableViewCell.swift */; };
+		349F15CE1D0B4734007CA091 /* UserDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349F15CD1D0B4734007CA091 /* UserDetails.storyboard */; };
+		349F15D01D0B47AE007CA091 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15CF1D0B47AE007CA091 /* UserDetailsViewController.swift */; };
+		349F15D21D0B5111007CA091 /* UserDetailsViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15D11D0B5111007CA091 /* UserDetailsViewConfigurator.swift */; };
+		349F15D41D0B58B7007CA091 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15D31D0B58B7007CA091 /* UIImageView+Extension.swift */; };
+		349F15D81D0B7706007CA091 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15D71D0B7706007CA091 /* HistoryViewController.swift */; };
+		349F15DA1D0B7A69007CA091 /* EditHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15D91D0B7A69007CA091 /* EditHistoryTableViewCell.swift */; };
+		349F15DC1D0B8844007CA091 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15DB1D0B8844007CA091 /* HistoryViewModel.swift */; };
+		349F15DE1D0B8D07007CA091 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F15DD1D0B8D07007CA091 /* NSDate+Extension.swift */; };
+		34AB0EA71D09C95200A71C5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB0EA61D09C95200A71C5C /* AppDelegate.swift */; };
+		34AB0EAC1D09C95200A71C5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AB0EAA1D09C95200A71C5C /* Main.storyboard */; };
+		34AB0EAE1D09C95200A71C5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AB0EAD1D09C95200A71C5C /* Assets.xcassets */; };
+		34AB0EB11D09C95200A71C5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34AB0EAF1D09C95200A71C5C /* LaunchScreen.storyboard */; };
+		34AB0EBF1D09D3E000A71C5C /* UserListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB0EBE1D09D3E000A71C5C /* UserListTableViewController.swift */; };
+		34AB0EC11D09D51E00A71C5C /* UserViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB0EC01D09D51E00A71C5C /* UserViewModelMapper.swift */; };
+		34AB0EC31D09D56A00A71C5C /* UsersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB0EC21D09D56A00A71C5C /* UsersProvider.swift */; };
+		34AB0EC71D09D6B600A71C5C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AB0EC61D09D6B600A71C5C /* SwiftyJSON.framework */; };
+		34AB0ECD1D09DE4000A71C5C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB0ECC1D09DE4000A71C5C /* UserModel.swift */; };
+		34AB0ECF1D09DE5200A71C5C /* UserHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AB0ECE1D09DE5200A71C5C /* UserHistoryModel.swift */; };
+		4CB02DBA6510CB4FB3A27BE7 /* Pods_TenClouds_Junior_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5527B1FEF035E8DD33DF70B /* Pods_TenClouds_Junior_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		347527671D0A10660028FAEF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/TenClouds-Junior-iOS-fdwyalvunkodkteeovcmerxyvqil/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
+		347527691D0A10690028FAEF /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/TenClouds-Junior-iOS-fdwyalvunkodkteeovcmerxyvqil/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		349F15BA1D0AC558007CA091 /* LaunchDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchDataViewController.swift; sourceTree = "<group>"; };
+		349F15BC1D0AC5BE007CA091 /* UsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		349F15C11D0AED44007CA091 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		349F15C31D0AF77F007CA091 /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "Pods/../build/Debug-iphoneos/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
+		349F15C51D0B0225007CA091 /* UserHistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryViewModel.swift; sourceTree = "<group>"; };
+		349F15C91D0B1426007CA091 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		349F15CD1D0B4734007CA091 /* UserDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserDetails.storyboard; sourceTree = "<group>"; };
+		349F15CF1D0B47AE007CA091 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		349F15D11D0B5111007CA091 /* UserDetailsViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewConfigurator.swift; sourceTree = "<group>"; };
+		349F15D31D0B58B7007CA091 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		349F15D71D0B7706007CA091 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		349F15D91D0B7A69007CA091 /* EditHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		349F15DB1D0B8844007CA091 /* HistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		349F15DD1D0B8D07007CA091 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		34AB0EA31D09C95200A71C5C /* TenClouds-Junior-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TenClouds-Junior-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34AB0EA61D09C95200A71C5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34AB0EAB1D09C95200A71C5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34AB0EAD1D09C95200A71C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34AB0EB01D09C95200A71C5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34AB0EB21D09C95200A71C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34AB0EBE1D09D3E000A71C5C /* UserListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewController.swift; sourceTree = "<group>"; };
+		34AB0EC01D09D51E00A71C5C /* UserViewModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModelMapper.swift; sourceTree = "<group>"; };
+		34AB0EC21D09D56A00A71C5C /* UsersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersProvider.swift; sourceTree = "<group>"; };
+		34AB0EC61D09D6B600A71C5C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		34AB0EC81D09D6BE00A71C5C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		34AB0ECA1D09D6C200A71C5C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		34AB0ECC1D09DE4000A71C5C /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		34AB0ECE1D09DE5200A71C5C /* UserHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryModel.swift; sourceTree = "<group>"; };
+		5487E00EA98716128161CB1E /* Pods-TenClouds-Junior-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TenClouds-Junior-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TenClouds-Junior-iOS/Pods-TenClouds-Junior-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		880B84885310F327F84EAAED /* Pods-TenClouds-Junior-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TenClouds-Junior-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TenClouds-Junior-iOS/Pods-TenClouds-Junior-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C5527B1FEF035E8DD33DF70B /* Pods_TenClouds_Junior_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TenClouds_Junior_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34AB0EA01D09C95200A71C5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				349F15C41D0AF77F007CA091 /* ReachabilitySwift.framework in Frameworks */,
+				3475276A1D0A10690028FAEF /* RealmSwift.framework in Frameworks */,
+				347527681D0A10660028FAEF /* Realm.framework in Frameworks */,
+				34AB0EC71D09D6B600A71C5C /* SwiftyJSON.framework in Frameworks */,
+				4CB02DBA6510CB4FB3A27BE7 /* Pods_TenClouds_Junior_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15FE503F84A9125CE77FB50C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5487E00EA98716128161CB1E /* Pods-TenClouds-Junior-iOS.debug.xcconfig */,
+				880B84885310F327F84EAAED /* Pods-TenClouds-Junior-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		34AB0E9A1D09C95200A71C5C = {
+			isa = PBXGroup;
+			children = (
+				34AB0EA51D09C95200A71C5C /* TenClouds-Junior-iOS */,
+				34AB0EA41D09C95200A71C5C /* Products */,
+				15FE503F84A9125CE77FB50C /* Pods */,
+				DBBEF172E01F38B61665F6DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		34AB0EA41D09C95200A71C5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34AB0EA31D09C95200A71C5C /* TenClouds-Junior-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34AB0EA51D09C95200A71C5C /* TenClouds-Junior-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				34AB0EB81D09CA8E00A71C5C /* Extensions */,
+				34AB0EB91D09CA9A00A71C5C /* DAL */,
+				34AB0EBA1D09CA9F00A71C5C /* Presentation */,
+				34AB0EA61D09C95200A71C5C /* AppDelegate.swift */,
+				34AB0EAA1D09C95200A71C5C /* Main.storyboard */,
+				349F15CD1D0B4734007CA091 /* UserDetails.storyboard */,
+				34AB0EAF1D09C95200A71C5C /* LaunchScreen.storyboard */,
+				34AB0EAD1D09C95200A71C5C /* Assets.xcassets */,
+				34AB0EB21D09C95200A71C5C /* Info.plist */,
+			);
+			path = "TenClouds-Junior-iOS";
+			sourceTree = "<group>";
+		};
+		34AB0EB81D09CA8E00A71C5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				349F15C11D0AED44007CA091 /* UIView+Extension.swift */,
+				349F15D31D0B58B7007CA091 /* UIImageView+Extension.swift */,
+				349F15DD1D0B8D07007CA091 /* NSDate+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		34AB0EB91D09CA9A00A71C5C /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				34AB0EC01D09D51E00A71C5C /* UserViewModelMapper.swift */,
+				34AB0EC21D09D56A00A71C5C /* UsersProvider.swift */,
+			);
+			name = DAL;
+			sourceTree = "<group>";
+		};
+		34AB0EBA1D09CA9F00A71C5C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				34AB0EBD1D09CAC900A71C5C /* Models */,
+				34AB0EBC1D09CAC100A71C5C /* Views */,
+				34AB0EBB1D09CAB900A71C5C /* ViewControllers */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		34AB0EBB1D09CAB900A71C5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				34AB0EBE1D09D3E000A71C5C /* UserListTableViewController.swift */,
+				349F15BA1D0AC558007CA091 /* LaunchDataViewController.swift */,
+				349F15CF1D0B47AE007CA091 /* UserDetailsViewController.swift */,
+				349F15D71D0B7706007CA091 /* HistoryViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		34AB0EBC1D09CAC100A71C5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				349F15C91D0B1426007CA091 /* UserTableViewCell.swift */,
+				349F15D11D0B5111007CA091 /* UserDetailsViewConfigurator.swift */,
+				349F15D91D0B7A69007CA091 /* EditHistoryTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		34AB0EBD1D09CAC900A71C5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				349F15BC1D0AC5BE007CA091 /* UsersViewModel.swift */,
+				34AB0ECC1D09DE4000A71C5C /* UserModel.swift */,
+				34AB0ECE1D09DE5200A71C5C /* UserHistoryModel.swift */,
+				349F15C51D0B0225007CA091 /* UserHistoryViewModel.swift */,
+				349F15DB1D0B8844007CA091 /* HistoryViewModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DBBEF172E01F38B61665F6DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				349F15C31D0AF77F007CA091 /* ReachabilitySwift.framework */,
+				347527691D0A10690028FAEF /* RealmSwift.framework */,
+				347527671D0A10660028FAEF /* Realm.framework */,
+				34AB0ECA1D09D6C200A71C5C /* RealmSwift.framework */,
+				34AB0EC81D09D6BE00A71C5C /* Realm.framework */,
+				34AB0EC61D09D6B600A71C5C /* SwiftyJSON.framework */,
+				C5527B1FEF035E8DD33DF70B /* Pods_TenClouds_Junior_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34AB0EA21D09C95200A71C5C /* TenClouds-Junior-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34AB0EB51D09C95200A71C5C /* Build configuration list for PBXNativeTarget "TenClouds-Junior-iOS" */;
+			buildPhases = (
+				EA559B18C01F42081088AF00 /* [CP] Check Pods Manifest.lock */,
+				34AB0E9F1D09C95200A71C5C /* Sources */,
+				34AB0EA01D09C95200A71C5C /* Frameworks */,
+				34AB0EA11D09C95200A71C5C /* Resources */,
+				2E061FB2542F0F9EDCE31057 /* [CP] Embed Pods Frameworks */,
+				393176F5E9AF16BFF172C0B9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TenClouds-Junior-iOS";
+			productName = "TenClouds-Junior-iOS";
+			productReference = 34AB0EA31D09C95200A71C5C /* TenClouds-Junior-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34AB0E9B1D09C95200A71C5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = joannakubiak;
+				TargetAttributes = {
+					34AB0EA21D09C95200A71C5C = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 34AB0E9E1D09C95200A71C5C /* Build configuration list for PBXProject "TenClouds-Junior-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34AB0E9A1D09C95200A71C5C;
+			productRefGroup = 34AB0EA41D09C95200A71C5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34AB0EA21D09C95200A71C5C /* TenClouds-Junior-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34AB0EA11D09C95200A71C5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34AB0EB11D09C95200A71C5C /* LaunchScreen.storyboard in Resources */,
+				34AB0EAE1D09C95200A71C5C /* Assets.xcassets in Resources */,
+				349F15CE1D0B4734007CA091 /* UserDetails.storyboard in Resources */,
+				34AB0EAC1D09C95200A71C5C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E061FB2542F0F9EDCE31057 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TenClouds-Junior-iOS/Pods-TenClouds-Junior-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		393176F5E9AF16BFF172C0B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TenClouds-Junior-iOS/Pods-TenClouds-Junior-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA559B18C01F42081088AF00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34AB0E9F1D09C95200A71C5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34AB0EBF1D09D3E000A71C5C /* UserListTableViewController.swift in Sources */,
+				34AB0ECF1D09DE5200A71C5C /* UserHistoryModel.swift in Sources */,
+				349F15D41D0B58B7007CA091 /* UIImageView+Extension.swift in Sources */,
+				349F15D81D0B7706007CA091 /* HistoryViewController.swift in Sources */,
+				349F15DC1D0B8844007CA091 /* HistoryViewModel.swift in Sources */,
+				349F15DA1D0B7A69007CA091 /* EditHistoryTableViewCell.swift in Sources */,
+				349F15D21D0B5111007CA091 /* UserDetailsViewConfigurator.swift in Sources */,
+				349F15D01D0B47AE007CA091 /* UserDetailsViewController.swift in Sources */,
+				349F15CA1D0B1426007CA091 /* UserTableViewCell.swift in Sources */,
+				34AB0EC11D09D51E00A71C5C /* UserViewModelMapper.swift in Sources */,
+				349F15C21D0AED44007CA091 /* UIView+Extension.swift in Sources */,
+				349F15C61D0B0225007CA091 /* UserHistoryViewModel.swift in Sources */,
+				349F15DE1D0B8D07007CA091 /* NSDate+Extension.swift in Sources */,
+				34AB0EA71D09C95200A71C5C /* AppDelegate.swift in Sources */,
+				349F15BB1D0AC558007CA091 /* LaunchDataViewController.swift in Sources */,
+				34AB0ECD1D09DE4000A71C5C /* UserModel.swift in Sources */,
+				349F15BD1D0AC5BE007CA091 /* UsersViewModel.swift in Sources */,
+				34AB0EC31D09D56A00A71C5C /* UsersProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		34AB0EAA1D09C95200A71C5C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34AB0EAB1D09C95200A71C5C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34AB0EAF1D09C95200A71C5C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34AB0EB01D09C95200A71C5C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34AB0EB31D09C95200A71C5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34AB0EB41D09C95200A71C5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34AB0EB61D09C95200A71C5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5487E00EA98716128161CB1E /* Pods-TenClouds-Junior-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyJSON",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReachabilitySwift",
+				);
+				INFOPLIST_FILE = "TenClouds-Junior-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joannakubiak.TenClouds-Junior-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		34AB0EB71D09C95200A71C5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 880B84885310F327F84EAAED /* Pods-TenClouds-Junior-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyJSON",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReachabilitySwift",
+				);
+				INFOPLIST_FILE = "TenClouds-Junior-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joannakubiak.TenClouds-Junior-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34AB0E9E1D09C95200A71C5C /* Build configuration list for PBXProject "TenClouds-Junior-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34AB0EB31D09C95200A71C5C /* Debug */,
+				34AB0EB41D09C95200A71C5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34AB0EB51D09C95200A71C5C /* Build configuration list for PBXNativeTarget "TenClouds-Junior-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34AB0EB61D09C95200A71C5C /* Debug */,
+				34AB0EB71D09C95200A71C5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34AB0E9B1D09C95200A71C5C /* Project object */;
+}
